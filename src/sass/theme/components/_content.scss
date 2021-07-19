@@ -1,0 +1,547 @@
+.fade {
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+.section-area {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    @include bp(desktop) {
+    }
+    @include bp(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include bp(sm-down) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .intro {
+        text-align: center;
+        padding-bottom: 30px;
+        h2 {
+            @include heading-font;
+        }
+        p {
+            @include regular-text;
+            margin-bottom: 20px;
+        }
+    }
+}
+#free-estimate-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include bp(sm-down) {
+        .col-md-6 {
+            min-width: 100%!important;
+        }
+    }
+}
+body {
+	&.fixed {
+		position: fixed!important;
+	}
+}
+.show-lg {
+	@include bp(sm-down) {
+		display: none!important;
+	}
+}
+
+.show-sm {
+	@include bp(sm-up) {
+		display: none!important;
+	}
+}
+
+.bootstrap-select {
+    width: 100%!important;
+    .btn {
+        width: 100%;
+        &:after {
+            margin: 0;
+            border:0;
+            content: "\e900";
+            font-family: "icomoon";
+            font-weight: 400;
+            color: #7F8285;
+            font-size: 18px;
+            right: 10px;
+            @include animate-fade;
+            @include centre(y);
+        }
+    }
+    &.open {
+        .btn {
+            &:after {
+                content: '\f106';
+            }
+        }
+    }
+    .dropdown-menu {
+        li.active, li:active {
+            a {
+                background-color: $green;
+                color: #fff;
+            }
+        }
+        a {
+            color: #000;
+        }
+    }
+    .dropdown-toggle .filter-option {
+        height: auto;
+    }
+}
+
+// Quote form
+
+.quote-form {
+    &-in {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid $green;
+        color: $green;
+        @include bp(sm-down) {
+            padding: 15px;
+        }
+        .nav-tabs {
+            padding-top: 15px;
+            margin-bottom: 15px;
+            justify-content: center;
+            margin-right: -11px;
+            margin-left: -11px;
+            border: 0;
+            display: flex;
+            @include bp(sm-down) {
+                margin-bottom: 15px;
+            }
+            li {
+                border: 0;
+                padding-left: 4px;
+                padding-right: 4px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 80px;
+                    height: 60px;
+                    margin: 0;
+                    padding: 10px;
+                    border: 1px solid $green;
+                    border-radius: 15px;
+                    font-family: $font-heading;
+                    font-size: 13px;
+                    line-height: 1;
+                    text-align: center;
+                    color: $green;
+                    background-color: #fff;
+                    border-radius:4px;
+                    text-transform: uppercase;
+                    position: relative;
+                    padding-bottom: 12px;
+                    @include bp(md-down) {
+                        background-color:transparent;
+                    }
+                    @include bp(sm-down) {
+                        width: 70px;
+                        height: 60px;
+                    }
+                    &:hover {
+                        color: #fff !important;
+                        background-color: #000;
+                    }
+                    &:after {
+                        @include font-ico;
+                        @include centre(x);
+                        bottom: -4px;
+                        content: '\e900';
+                        color: #fff;
+                        font-size: 18px;
+                        opacity: 0;
+                    }
+                    &.active {
+                        background-color: $green;
+                        color: #fff !important;
+                        border: 1px solid $green;
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                    span {
+                        &:not([class^="icon-"]) {
+                            display: block;
+                            line-height: 1;
+                            margin-top: 1px;
+                        }
+                    }
+                    [class^="icon-"], [class*=" icon-"] {
+                        font-size: 1.625em;
+                        display: block;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+        .form-title {
+            @include heading-font3;
+            display: block;
+            color: $green;
+            text-transform: none;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        form {
+            .center-block {
+                text-align: center;
+            }
+            .form-group {
+                margin-bottom: 10px;
+            }
+            input[type=text], input[type=number], input[type=email], input[type=tel], textarea, .bootstrap-select .btn {
+                @include input-style;
+            }
+            textarea {
+                height: 160px;
+            }
+            
+            .bootstrap-select .btn {
+                padding-right: 30px;
+            }
+            .add-car-btn {
+                font-family: $font-heading;
+                display: block;
+                padding: 12.5px 24px;
+                line-height: 1;
+                text-transform: uppercase;
+                color: $green;
+                letter-spacing: .075em;
+                text-align: center;
+                font-size: .875em;
+                border: 0;
+                background: none;
+                margin-left: auto;
+                margin-right: auto;
+                @include animate-fade;
+                &:hover {
+                    color: #222;
+                }
+            }
+        }
+        label {
+            @include input-label;
+        }
+        button[type=submit],  input[type=submit] {
+            @include submit-btn;
+        }
+    }
+}
+
+#cookie-notice {
+    background-color: rgba(255,255,255,0.8);
+    z-index: 9997;
+    position: fixed;
+    min-width: 100%;
+    height: auto;
+    font-size: 13px;
+    letter-spacing: 0;
+    left: 0;
+    text-align: center;
+    font-family: $font-main;
+    bottom: 0;
+    &.slide-up {
+        -webkit-animation-name: slideInUp;
+        animation-name: slideInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    &.slide-down {
+        -webkit-animation-name: slideOutDown;
+        animation-name: slideOutDown;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    &-in {
+        padding: 15px 30px;
+        @include bp(md) {
+        }
+        @include bp(sm-down) {
+            padding: 15px 20px;
+        }
+    }
+    .notice-text, .notice-btns {
+        display: inline-block; 
+    }
+    p {
+        color: #000;
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+    .notice-text {
+        margin-bottom: 6px;
+    }
+    .notice-btns {
+        padding-right: 10px;
+        @include bp(sm-down) {
+            margin-top: 15px;
+        }
+        a {
+            font-family: $font-main;
+            font-size: 13px;
+            letter-spacing: .25px;
+            line-height: 13px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            touch-action: manipulation;
+            white-space: nowrap;
+            outline: 0;
+            box-shadow: none;
+            text-shadow: none;
+            border: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background: $green;
+            color: $green;
+            padding: 5px 10px;
+            margin: 0 0 0 5px;
+            color: #fff;
+            &:first-of-type {
+                @include bp(sm-down) {
+                    margin-left: 0;
+                }
+            }
+            &:hover {
+                background-color: #fff;
+                color: $green;
+                box-shadow: inset 0 0 0 99999px rgba(0,0,0,.05);
+            }
+        }
+    }
+    #close-notice {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -10px;
+        width: 15px;
+        height: 15px;
+        opacity: .5;
+        padding: 10px;
+        outline: 0;
+        &:before, &:after {
+            position: absolute;
+            content: ' ';
+            height: 15px;
+            width: 2px;
+            top: 3px;
+            background-color: #fff;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.toggle-modal {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $font-main;
+    color: #dd3333;
+    text-decoration: underline;
+    display: inline-block;
+    position: relative;
+    &:hover {
+        color: $green;
+    }
+}   
+
+.disclaimer-modal {
+    .modal {
+        @media (min-width: 992px) {
+            max-width: 800px;
+        }
+        border-radius: 0;
+        padding: 0;
+        min-height: auto;
+    }
+    .disclaimer-modal-wrap {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($green, .99);
+        padding: 30px;
+        p {
+            @include regular-text;
+            color: #fff;
+        }
+    }
+}
+
+
+.wp-pagenavi a, .wp-pagenavi span {
+    border: none;
+    color: black;
+}
+.wp-pagenavi span.current {
+    color: $green;
+}
+
+
+.wpcf7-not-valid-tip {
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    border:none;
+    padding:0px;
+    color:red;
+}
+
+.ui-datepicker {
+    width:360px;
+    padding:0px;
+    border:none;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+    0 2px 2px rgba(0,0,0,0.15), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.15);
+}
+
+.ui-datepicker-header {
+		border:none;
+		background:#ddd;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+}
+
+.ui-datepicker-title {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		margin:0px;
+		text-transform: uppercase;
+		color:#999;
+		font-size: 18px;
+}
+
+	.ui-datepicker-calendar {
+			margin:0px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			border-collapse: inherit;
+			padding-bottom: 50px;
+}
+
+.ui-datepicker-calendar::after {
+			content:'lower rates';
+			position: absolute;
+			bottom:20px;
+			right:20px;
+			font-size: 18px;
+			background:#3c8741;
+			color:white;
+			border-radius: 6px;
+			padding-left: 8px;
+			padding-right: 8px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+}
+
+.ui-datepocker-calendar thead th {
+	      border-bottom: 2px solid #e5e9e5;
+	 	color:#ffd366;
+			text-transform: uppercase;
+			font-size: 17px;
+}
+
+	.ui-datepicker-calendar  .ui-state-default {
+				border:none;
+				background:white;
+				padding:0px;
+				text-align: center;
+				color:#515151;
+				font-size: 17px;
+				padding-top: 7px;
+				padding-bottom: 7px;
+}
+
+.ui-datepicker {
+	padding-bottom:55px;
+}
+
+	td.ui-state-disabled {
+			opacity: 0.2;
+			color:#c4c4c4;
+	}
+	td.ui-datepicker-other-month  {
+			opacity: 0.2;
+			color:#c4c4c4;
+}
+
+	td.ui-datepicker-today a {
+			text-align: center;
+				background:#3c8741!important;
+				color:white!important;
+	}
+
+td.event.ui-datepicker-today  a {
+	background:#3c8741!important;
+}
+
+a.ui-state-active {
+			color:#3c8741!important;
+}
+
+.event a {
+	position: relative;
+}
+
+.event a::after {
+		width: 100%;
+		height: 5px;
+		background:#3c8741;
+		content:'';
+		display: block;
+		bottom:0px;
+		left:0px;
+		border-radius: 8px;
+		position: absolute;
+		left:0px;
+		bottom:-3px;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left:20px;
+	top:15px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	right:20px;
+	top:15px;
+}
+
+#bottom-form {
+    margin-bottom: 50px;
+}

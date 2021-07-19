@@ -1,0 +1,241 @@
+#about-header {
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 348px;
+    @include bp(desktop) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include bp(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    h1 {
+        @include heading-font;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 3.5em;
+        @include bp(desktop) {
+            font-size: 3em;
+        }
+        @include bp(lg) {
+            font-size: 2.7em;
+        }
+        @include bp(md) {
+            font-size: 2.4em;
+        }
+        @include bp(sm-down) {
+            font-size: 2.1em;
+        }
+    }
+}
+#about-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include bp(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include bp(sm-down) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    h1 {
+        @include heading-font;
+    }
+    h2 {
+        @include heading-font2;
+        text-align: left;
+        text-transform: none;
+    }
+    h3 {
+        @include heading-font3;
+        text-transform: none;
+    }
+    h4 {
+        @include heading-font4;
+    }
+    p {
+        @include regular-text;
+        strong, b {
+            font-family: $font-heading;
+            color: #222;
+        }
+        a {
+            color: $green;
+            &:hover {
+                color: #222;
+            }
+        }
+    }
+    .about-content {
+        ul {
+            @include list-style;
+            li {
+                strong {
+                    font-family: $font-heading;
+                    color: #222;
+                }
+            }
+        }
+    }
+    .quote-form {
+        position: sticky;
+        top: 31px;
+    }
+    .service-content {
+        h2 {
+            color: #666;
+            text-transform: uppercase;
+        }
+        ul {
+            @include list-style;
+            li {
+                strong {
+                    font-family: $font-heading;
+                    color: #222;
+                }
+            }
+        }
+    }
+    img.alignleft {
+        display: inline;
+        float: left;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    
+    img.alignright {
+        display: inline;
+        float: right;
+        margin-left: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    img.alignleft, img.alignright {
+        @include bp(lg) {
+            max-width: 50%;
+        }
+        @include bp(md) {
+            max-width: 50%;
+        }
+        @include bp(sm-down) {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    #services-div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .col-md-6 {
+            margin-bottom: 20px;
+        }
+    }
+    .services-title {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 40px;
+    }
+}
+
+#regular-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include bp(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include bp(sm-down) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    h1 {
+        @include heading-font;
+    }
+    h2 {
+        @include heading-font2;
+        text-align: left;
+        text-transform: none;
+    }
+    h3 {
+        @include heading-font3;
+        text-transform: none;
+    }
+    h4 {
+        @include heading-font4;
+    }
+    p {
+        @include regular-text;
+        color: #666666;
+        font-size: 16px;
+        strong {
+            font-family: $font-heading;
+            color: #222;
+        }
+        a {
+            color: $green;
+            &:hover {
+                color: #222;
+            }
+        }
+    }
+    ul {
+        @include list-style;
+        li {
+            color: #666666;
+            font-size: 16px;
+            strong {
+                font-family: $font-heading;
+                color: #222;
+            }
+        }
+    }
+    img.alignleft {
+        display: inline;
+        float: left;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    
+    img.alignright {
+        display: inline;
+        float: right;
+        margin-left: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    img.alignleft, img.alignright {
+        @include bp(lg) {
+            max-width: 50%;
+        }
+        @include bp(md) {
+            max-width: 50%;
+        }
+        @include bp(sm-down) {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .quote-form {
+        ul {
+            margin: 0;
+            list-style: none;
+            margin-bottom: 15px;
+            li {
+                list-style: none;
+            }
+        } 
+        
+    }
+}

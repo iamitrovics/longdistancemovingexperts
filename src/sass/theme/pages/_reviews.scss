@@ -1,0 +1,124 @@
+#reviews-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .reviews {
+        h1 {
+            @include heading-font;
+            margin-bottom: 30px;
+        }
+        .review-item {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #dfdfdf;
+            blockquote {
+                padding: 40px 50px;
+                background-color: #f5f5f5;
+                border-left: 3px solid $green;
+                margin-bottom: 30px;
+                p {
+                    font-family: $font-heading;
+                    font-style: italic;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin-bottom: 0;
+                    color: #222222;
+                    letter-spacing: -.01em;
+                }
+                .author {
+                    font-family: $font-main;
+                    font-style: italic;
+                    display: block;
+                    margin-top: 30px;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    color: #222222;
+                }
+            }
+            .star-area {
+                text-align: center;
+                span {
+                    color: #FF8A00;
+                }
+                span.empty-star {
+                    color: black;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+    .review-form {
+        padding-left: 40px;
+        @include bp(sm-down) {
+            padding-left: 0;
+        }
+        h2 {
+            font-family: $font-heading;
+            font-size: 1.375em;
+            line-height: 1.2;
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            .center-block {
+                text-align: center;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            input[type=text], input[type=number], input[type=email], input[type=tel], textarea, .bootstrap-select .btn {
+                @include input-style;
+            }
+            textarea {
+                height: 150px;
+                line-height: 1.78571;
+            }
+            .row {
+                padding-left: 7px;
+                padding-right: 7px;
+                [class*="col-"] {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                .col-md-6 {
+                    @include bp(sm-down) {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+            }
+            label {
+                font-family: $font-main;
+                color: #000;
+                font-size: 14px;
+                line-height: 1.78571;
+                display: inline-block;
+                margin-right: 0;
+            }
+            input[type=submit] {
+                font-family: $font-heading;
+                font-size: 24px;
+                border-radius: 4px;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12.5px 24px;
+                background-color: $green;
+                letter-spacing: .075em;
+                text-align: center;
+                color: #000;
+                @include animate-fade;
+                width: 100%;
+                border: 1px solid #010101;
+                &:hover {
+                    background-color: $green-light;
+                }
+            }
+        }
+    }
+}

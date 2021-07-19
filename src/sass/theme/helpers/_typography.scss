@@ -1,0 +1,297 @@
+// Import fonts and fonts variables
+
+@font-face {
+    font-family: 'Ubuntu Bold';
+    src: url('../fonts/Ubuntu-Bold.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu Italic';
+    src: url('../fonts/Ubuntu-Italic.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu BoldItalic';
+    src: url('../fonts/Ubuntu-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Ubuntu-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu Regular';
+    src: url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?konq3g');
+    src:  url('../fonts/icomoon.eot?konq3g#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?konq3g') format('truetype'),
+      url('../fonts/icomoon.woff?konq3g') format('woff'),
+      url('../fonts/icomoon.svg?konq3g#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-house-user:before {
+    content: "\e90f";
+  }
+  .icon-video:before {
+    content: "\e910";
+  }
+  .icon-long-arrow-left:before {
+    content: "\e90e";
+  }
+  .icon-phone-alt:before {
+    content: "\e909";
+  }
+  .icon-phone-alt-o:before {
+    content: "\e90d";
+  }
+  .icon-angle-down:before {
+    content: "\e900";
+  }
+  .icon-angle-left:before {
+    content: "\e901";
+  }
+  .icon-angle-right:before {
+    content: "\e902";
+  }
+  .icon-angle-up:before {
+    content: "\e903";
+  }
+  .icon-car:before {
+    content: "\e904";
+  }
+  .icon-car-garage:before {
+    content: "\e905";
+  }
+  .icon-facebook-f:before {
+    content: "\e906";
+  }
+  .icon-home-lg:before {
+    content: "\e907";
+  }
+  .icon-long-arrow-right:before {
+    content: "\e908";
+  }
+  .icon-star:before {
+    content: "\e90a";
+  }
+  .icon-twitter:before {
+    content: "\e90b";
+  }
+  .icon-yelp:before {
+    content: "\e90c";
+  }
+  
+  
+$ubu-bold: 'Ubuntu Bold';
+$ubu-reg: 'Ubuntu Regular';
+$ubu-italic: 'Ubuntu Italic';
+$ubu-boldi: 'Ubuntu BoldItalic';
+
+$font-main: 'Ubuntu Regular';
+$font-heading: 'Ubuntu Bold';
+
+
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body { 
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS
+	overflow-x:hidden;
+    color: #000;    
+}
+
+p {
+    font-family: $font-main;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.78571;
+    margin-bottom: 20px;
+    a {
+        color: $green;
+        &:hover {
+            color: #222222;
+        }
+    }
+    strong {
+        font-family: $font-heading;
+    }
+}
+
+ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+small {
+    font-size: 0.875em;
+}
+
+address {
+    padding:0px;
+    margin:0px;
+}
+
+a {
+    @include animate-fade;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+iframe {
+    border: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+// reset
+a {
+    @include animate-fade;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button, input, textarea {
+    &:focus {
+        outline: none!important;
+    }
+}
+
+button, input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    //background-clip: padding-box;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    border-radius: 0;
+}
+input[type="submit"] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0;
+    margin: 0;
+}
+
+address {
+    margin:0px;
+    padding:0px;
+}
+
+i {
+    font-style: normal;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: $green;
+    color: #fff;
+}
+
+::selection {
+    background: $green;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    //@include animate-fade;
+}

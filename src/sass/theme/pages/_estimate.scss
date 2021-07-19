@@ -1,0 +1,205 @@
+#estimate-header {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include bp(desktop) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include bp(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .header-caption {
+        h1 {
+            @include page-title;
+            text-align: left;
+            text-transform: none;
+            color: #222;
+            margin-bottom: 20px;
+        }
+    }
+    .estimate-form {
+        .estimate-form-heading {
+            background: rgba(255, 255, 255, .5);
+            margin-bottom: 2px;
+            padding: 25px;
+        }
+        .form-title {
+            text-align: center;
+            display: block;
+            @include heading-font3;
+            color: #fff;
+            text-transform: none;
+        }
+        .nav-tabs {
+            border: 0;
+            display: flex;
+            @include bp(sm-down) {
+                margin-bottom: 15px;
+            }
+            li {
+                border: 0;
+                margin-right: 10px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0;
+                    padding: 10px;
+                    border: 1px solid $green;
+                    border-radius: 8px;
+                    font-family: $font-heading;
+                    font-size: 13px;
+                    line-height: 1;
+                    text-align: center;
+                    color: $green;
+                    background-color: #fff;
+                    border-radius:8px;
+                    text-transform: uppercase;
+                    position: relative;
+                    @include bp(md-down) {
+                        background-color:transparent;
+                    }
+                    &:hover {
+                        color: #fff;
+                        background-color: #000;
+                    }
+                    &.active {
+                        background-color: $green;
+                        color: #fff;
+                        border: 1px solid $green;
+                    }
+                    [class^="icon-"], [class*=" icon-"] {
+                        font-size: 24px;
+                        display: block;
+                    }
+                }
+            }
+        }
+        form {
+            padding: 25px;
+            background: rgba(255, 255, 255, .5);
+            .center-block {
+                text-align: center;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            input[type=text], input[type=number], input[type=email], input[type=tel], textarea, .bootstrap-select .btn {
+                @include input-style;
+            }
+            textarea {
+                height: 150px;
+                line-height: 1.78571;
+            }
+            .shipment-label {
+                font-family: $font-heading;
+                color: #000;
+                font-size: 14px;
+            }
+            .row {
+                padding-left: 7px;
+                padding-right: 7px;
+                [class*="col-"] {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+                .col-xs-6 {
+                    @include bp(sm-down) {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+            }
+            label {
+                font-family: $font-main;
+                color: #000;
+                font-size: 14px;
+                line-height: 1.78571;
+                display: inline-block;
+                margin-right: 0;
+            }
+            input[type=submit] {
+                font-family: $font-heading;
+                font-size: 24px;
+                border-radius: 4px;
+                margin-bottom: 30px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12.5px 24px;
+                background-color: $green;
+                letter-spacing: .075em;
+                text-align: center;
+                color: #000;
+                @include animate-fade;
+                width: 100%;
+                border: 1px solid #010101;
+                max-width: 355px;
+                &:hover {
+                    background-color: $green-light;
+                }
+            }
+        }
+        &.shipment-form {
+            input[type=submit] {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+#estimate-page {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include bp(desktop) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include bp(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .estimate-item {
+        @include bp(sm-down) {
+            margin-bottom: 40px;
+        }
+        img {
+            margin-bottom: 30px;
+        }
+        h2 {
+            @include heading-font4;
+            text-transform: uppercase;
+            font-size: 1.125em;
+            color: #222;
+        }
+        p {
+            @include regular-text;
+            font-size: 14px;
+            color: #000;
+            margin-bottom: 0;
+        }
+    }
+}

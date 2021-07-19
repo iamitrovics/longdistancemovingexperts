@@ -1,0 +1,143 @@
+#contact-page {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include bp(desktop) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include bp(lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(md) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .header-caption {
+        h1 {
+            @include page-title;
+            color: #222;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        p {
+            font-family: $font-heading;
+            font-size: 1.375em;
+            line-height: 1.78571;
+            color: #222222;
+            margin-bottom: 20px;
+            &:first-of-type {
+                margin-bottom: 0;
+            }
+            @include bp(md-down) {
+                font-size: 1.25em;
+            }
+        }
+        a.call-btn {
+            font-size: 24px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: $font-heading;
+            border-radius: 40px;
+            background-color: $green;
+            letter-spacing: 0.1em;
+            padding: 16.5px 32px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            span {
+                margin-bottom: 3px;
+                margin-top: 2px;
+                margin-left: 10px;
+                padding-right: 10px;     
+            }
+            &:hover {
+                background-color: #222;
+            }
+        }
+        .license {
+            display: block;
+            color: #000;
+            font-family: $font-heading;
+            font-size: 14px;
+            line-height: 1.78571;
+        }
+    }
+    .contact-form {
+        background: rgba(255, 255, 255, .5);
+        padding: 20px;
+        @include bp(md-down) {
+            margin-top: 30px;
+        }
+        .form-title {
+            display: block;
+            font-family: $font-main;
+            color: #000;
+            font-size: 14px;
+            line-height: 1.78571;
+            margin-bottom: 15px;
+        }
+        form {
+            .center-block {
+                text-align: center;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            input[type=text], input[type=number], input[type=email], input[type=tel], textarea, .bootstrap-select .btn {
+                @include input-style;
+            }
+            textarea {
+                height: 150px;
+                line-height: 1.78571;
+            }
+            .row {
+                padding-left: 7px;
+                padding-right: 7px;
+                [class*="col-"] {
+                    padding-left: 8px;
+                    padding-right: 8px;
+                }
+            }
+            label {
+                font-family: $font-main;
+                color: #000;
+                font-size: 14px;
+                line-height: 1.78571;
+                display: inline-block;
+                margin-right: 0;
+            }
+            input[type=submit] {
+                font-family: $font-heading;
+                font-size: 24px;
+                border-radius: 4px;
+                margin-top: 25px;
+                margin-bottom: 30px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12.5px 24px;
+                background-color: $green;
+                letter-spacing: .075em;
+                text-align: center;
+                color: #000;
+                @include animate-fade;
+                width: 100%;
+                border: 1px solid #010101;
+                max-width: 355px;
+                &:hover {
+                    background-color: $green-light;
+                }
+            }
+        }
+    }
+}
