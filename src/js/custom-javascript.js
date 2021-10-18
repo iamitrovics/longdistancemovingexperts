@@ -35,6 +35,7 @@
 			});
         });
 
+
         $('.quote-form #q2 .add-car-btn').click(function() {
             $(this).fadeOut(300);
             $('.quote-form #q2 .add-car-div').fadeIn(300);

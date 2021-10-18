@@ -367,7 +367,6 @@
     }
     p {
         @include regular-text;
-        font-size: 14px;
         color: #666;
         strong {
             font-family: $font-heading;
@@ -454,9 +453,12 @@
         }
     }
     .blog-body {
-        max-width: 733px;
+        max-width: 940px;
         margin-left: auto;
         margin-right: auto;
+        @include bp(md) {
+            max-width: 740px;
+        }
         .blog-photo {
             margin-bottom: 20px;
             max-width: 1024px;
@@ -492,4 +494,88 @@
             color:$white;
         }
     }
+}
+
+#post-nav {
+    .container {
+        width: 100%;
+        position: relative;   
+    }
+    .post-wrapper {
+        position: relative;
+        background: #ddf3cd;
+        padding:35px;
+        border-radius: 9px;
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;    
+        margin-top: 30px;    
+        padding-bottom: 5px;
+    } 
+    #nav-slider {
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+            width: 20%;
+            margin-bottom: 30px;
+            @include bp(md) {
+                width: 50%;
+            }
+            @include bp(md-down) {
+                width: 50%;
+            }    
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                &.active {
+                    background:#3c8741;
+                    img {
+                        filter: brightness(0) invert(1);
+                    }
+                    span {
+                        color:$white!important;
+                    }
+                }
+            }        
+            .nav-col {
+                text-align: center;
+                height: 100%;
+                &:hover {
+                    span {
+                        color:$green;
+                    }
+                }
+                .icon {
+                    margin:0px auto;
+                    width: 66px;
+                    height: 66px;
+                    border-radius: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img {
+                        @include centre(both);
+                        // filter: brightness(0) invert(1);
+                    }                
+                }
+                span {
+                    display: block;
+                    margin-top: 15px;
+                    font-size: 1em;
+                    line-height: 1.222;
+                    @include animate-fade;
+                    text-transform: uppercase;
+                    font-family: $ubu-bold;
+                    font-size: 15px;
+                    color:$black;
+                    @include bp(sm) {
+                        font-size: 1em;
+                    }                    
+                }
+            }
+        }
+    }    
 }
