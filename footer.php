@@ -113,6 +113,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 <!-- overlay -->
 
+	<div id="fixed-cta">
+		<span class="label">Get a Free Estimate</span>
+		<a href="tel:<?php the_field('main_phone_number_options', 'options') ?>"><small><img src="<?php bloginfo('template_directory'); ?>/img/ico/phone-solid.svg" alt=""></small><span>Call: </span> <strong><?php the_field('main_phone_number_options', 'options') ?></strong></a>
+	</div>
+	<!-- // fixed cta  -->
+
 </body>
 </html>
 
