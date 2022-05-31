@@ -32,18 +32,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php the_field('body_code_snippet', 'options'); ?>
 	<?php endif; ?>
 
-		<div class="menu-overlay"></div>
-		<div class="main-menu-sidebar">
-			<header class="visible-xs visible-sm visible-md">
-				<a href="javascript:;" class="close-menu-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/close.png" alt=""></a>
-			</header>
-			<!-- // header  -->        
-			<div id="mobile__brand">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo.png" alt="">
-			</div>
-			<!-- // brand  -->
-			<div id="menu">
-				<ul>
+	<div class="menu-overlay"></div>
+	<div class="main-menu-sidebar visible-xs visible-sm visible-md" id="menu">
+
+		<header>
+			<a href="javascript:;" class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></a>
+		</header>
+		<!-- // header  -->
+
+
+		<nav id="sidebar-menu-wrapper">
+			<img src="<?php the_field('website_logo_general', 'options'); ?>" alt="">
+			<div id="menu">    
+				<ul class="nav-links">
 					<?php
 					wp_nav_menu( array(
 						'menu'              => 'mobile',
@@ -57,12 +58,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'items_wrap' => '%3$s',
 						'walker'            => new wp_bootstrap_navwalkermobile())
 					);
-					?> 
+					?>  
 				</ul>
 			</div>
 			<!-- // menu  -->
-		</div>
-		<!-- // mobile menu  -->
+
+		</nav> 
+		<!-- // sidebar menu wrapper  -->
+
+	</div>
+	<!-- // main menu sidebar  -->	
+
 		<div id="menu_area" class="menu-area">
 			<div id="top-license">
 				<?php the_field('license_text_top', 'options'); ?>
@@ -80,14 +86,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<a href="tel:<?php the_field('main_phone_number_options', 'options') ?>"><span class="icon-phone-alt"></span><?php the_field('main_phone_number_options', 'options') ?></a>
 								</div>
 								<!-- /#call-btn -->
-								<div id="top__mobile">
-									<a href="javascript:;" class="menu-btn">
+
+								<div id="mobile-menu--btn" class="d-lg-none">
+									<a href="javascript:;">
 										<span></span>
 										<span></span>
 										<span></span>
+										<div class="clearfix"></div>
 									</a>
 								</div>
-								<!-- /#top__mobile -->
+								<!-- // mobile  -->	
+
 							</div>
 							<!-- /#top-area -->
 							<nav class="mainmenu">

@@ -196,7 +196,7 @@ gulp.task( 'scripts', function() {
 		// paths.dev + '/js/jquery.matchHeight.js',
 		// paths.dev + '/js/moment/moment-with-locales.min.js',
 		paths.dev + '/js/jquery.fancybox.min.js',
-		paths.dev + '/js/sliding-menu.js',
+		// paths.dev + '/js/sliding-menu.js',
 		paths.dev + '/js/custom-javascript.js'
 	];
 	gulp
