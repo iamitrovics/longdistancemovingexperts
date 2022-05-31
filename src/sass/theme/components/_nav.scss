@@ -323,16 +323,14 @@
         top:0px;
         right:0px;    
         &:after {
-            @include font-ico;
+            font-family: $font-main;
             content:'+';
             color:$green;
             font-size: 32px!important;
             @include centre(both);
-            font-family: $font-heading;
         }
         &.active {
             &:after {
-                @include font-ico;
                 content:'-'!important;
                 @include centre(both);
                 margin-top: -3px;    
