@@ -312,10 +312,10 @@
     .ui-widget-content .ui-state-active,
     .ui-widget-header .ui-state-active,
     a.ui-button:active {
-        border: 1px solid $green;
-        background: $green;
+        border: 1px solid $green-light!important;
+        background: $green-light!important;
         font-weight: normal;
-        color: #ffffff;
+        color: #ffffff!important;
     }
 
     .ui-button {

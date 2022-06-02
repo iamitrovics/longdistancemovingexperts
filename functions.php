@@ -30,7 +30,7 @@ $understrap_includes = array(
 	'/settings.php',                        // Theme Settings
 	'/customize.php',                       // Customize theme
     '/ctp.php',                             // Custom Post Types	
-    // '/blocks.php',                          // Custom Post Types	
+	'/forms.php',                           // Quote Forms
 );
 
 foreach ( $understrap_includes as $file ) {
@@ -101,30 +101,6 @@ function wpex_parse_request_tricksy( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'wpex_parse_request_tricksy' );
-
-
-function cf7_post_to_third_party($form)
-{
-    $formMappings = array(
-        'first_name' => array('your-first'),
-		'last_name' => array('your-name'),
-		'email' => array('your-email'),
-		'phone' => array('your-tel','telephone'),
-		'move_date' => array('your-date','movement-date'),
-		'move_size' => array('your-size','movement-choice'),
-		'from_zip' => array('zip-from'),
-		'to_zip' => array('to-zip'),
-		'car_trailer' => array('trailer-type','trailsize'),
-		'car_make' => array('car-make'),
-		'car_model' => array('car-model'),
-		'car_year' => array('car-year'),
-        'source_details[url]' => array('dynamichidden-672'),
-        'source_details[title]' => array('dynamichidden-673')
-    );
-    $handler = new MovingSoftFormHandler($formMappings);
-    $handler->setOrigin('https://longdistancemovingexperts.com')->handleCF7($form, [337, 336, 335]);
-}
-add_action('wpcf7_mail_sent', 'cf7_post_to_third_party', 10, 1);
 
 
 function skip_mail_when_testing($f){
