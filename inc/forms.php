@@ -169,7 +169,7 @@ function utm_zip_to_validator($result, $tag) {
         }
 
         if(!lead_check_zip_tostate($the_value)){
-            $result->invalidate( $tag, "We dont cover local moving." );
+            $result->invalidate( $tag, "Sorry, we don't cover local moves." );
         }
 
 
