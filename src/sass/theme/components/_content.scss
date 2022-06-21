@@ -208,7 +208,7 @@ body {
                 @include input-style;
             }
 
-            .your-state, .your-stateto {
+            .your-state, .your-stateto, span[data-name="your-state"], span[data-name="your-stateto"] {
                 position: absolute;
                 top:3px;
                 right:18px;
